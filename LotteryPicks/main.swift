@@ -38,9 +38,9 @@ func drawNumbers(lowerLimit: Int, upperLimit: UInt32, amount: Int) -> Array<Int>
     return lotteryPicks
 }
 
-print("Generating 10 Powerball quick picks for you.\n")
+print("Generating 5 Powerball quick picks for you.\n")
 
-for _ in 1...10 {
+for _ in 1...5 {
 
     print("Lottery numbers:  ", terminator: "")
     print(drawNumbers(bottomNumber, upperLimit: topNumber, amount: numNumbers))
