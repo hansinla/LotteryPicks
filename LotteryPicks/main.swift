@@ -20,7 +20,7 @@ let topMega: UInt32 = 26
 let numMega = 1
 
 
-func drawNumbers(lowerLimit: Int, upperLimit: UInt32, amount: Int) -> Array<Int> {
+func drawNumbers(_ lowerLimit: Int, upperLimit: UInt32, amount: Int) -> Array<Int> {
     
     var currentPick: Int
     var lotteryPicks = Array<Int>() // init an empty array
@@ -33,7 +33,7 @@ func drawNumbers(lowerLimit: Int, upperLimit: UInt32, amount: Int) -> Array<Int>
             }
     } while (lotteryPicks.count < amount) // Loop for until array is full
     
-    lotteryPicks.sortInPlace { $0 < $1 } // sort the array for output
+    lotteryPicks.sort { $0 < $1 } // sort the array for output
     
     return lotteryPicks
 }
@@ -47,6 +47,8 @@ for _ in 1...5 {
 
     print("Powerball number: ", terminator: "")
     print(drawNumbers(bottomMega, upperLimit: topMega, amount: numMega))
+    
+    print()
     
 
 }
